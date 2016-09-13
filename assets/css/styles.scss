@@ -33,7 +33,7 @@
   cursor: pointer;
 }
 
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,900';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,900';
 
 // 480, 600, 840, 960, 1280, 1440, and 1600
 
@@ -141,19 +141,67 @@ header {
     font-weight: 900;
     color: rgba(0, 0, 0, 0.9);
   }
+
+  nav {
+    font-family: 'Roboto Mono', monospace, 'Roboto', sans-serif;
+
+    ul {
+      list-style: none;
+
+      padding: 0;
+      margin: 0;
+
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+
+      li {
+        a {
+          display: inline-block;
+          line-height: 36px;
+          color: rgba(0, 0, 0, 0.6);
+          text-decoration: none;
+          text-align: center;
+          padding: 0 8px;
+          margin: 6px 8px;
+          text-transform: uppercase;
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.9);
+          }
+        }
+      }
+    }
+  }
 }
 
-/*footer {
+footer {
+  @include responsive-ui();
+
+  min-height: 56px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
   position: absolute;
   right: 0;
-  bottom: 0;
   left: 0;
-  min-height: 56px;
 
-  background: black;
-}*/
+  background: #424242;
 
-nav {
+  font-size: 13px;
+
+  margin-top: 32px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   ul {
     list-style: none;
 
@@ -167,19 +215,16 @@ nav {
     align-content: center;
 
     li {
-      a {
-        display: inline-block;
+        display: block;
         line-height: 36px;
-        color: rgba(0, 0, 0, 0.6);
+        color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
         text-align: center;
         padding: 0 8px;
         margin: 6px 8px;
-        text-transform: uppercase;
 
-        &:hover {
-          color: rgba(0, 0, 0, 0.9);
-        }
+      a:hover {
+        color: rgba(255, 255, 255, 1);
       }
     }
   }
@@ -188,11 +233,14 @@ nav {
 .wrap {
   @include responsive-ui();
 
+  height: auto; 
+  min-height: 100%;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
 
   /*article {
     position: relative;
@@ -262,7 +310,9 @@ nav {
       color: rgba(0, 0, 0, 0.87);
     }
 
-    p {
+    time {
+      display: block;
+
       padding: 0px 16px 16px 16px;
       margin: 0;
 
@@ -276,9 +326,6 @@ nav {
 .post {
   @include responsive-ui();
 
-  margin-top: 16px;
-  margin-bottom: 16px;
-
   h1 {
     padding: 24px 16px 16px 16px;
     margin: 0;
@@ -289,6 +336,7 @@ nav {
   }
 
   time {
+    display: block;
     padding: 0px 16px 16px 16px;
     margin: 0;
 
@@ -303,6 +351,19 @@ nav {
 
   figure {
     margin: auto;
+  }
+
+  .tags {
+    padding: 0px 16px 16px 16px;
+    margin: 0;
+
+    font-family: 'Roboto Mono', monospace, 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.54);
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 }
 
@@ -344,7 +405,8 @@ figure {
     color: rgba(0, 0, 0, 0.54);
 
     figcaption {
-      border-left: 2px solid #64ffda;
+      padding: 8px;
+      background: white;
     }
 
     img {
@@ -353,6 +415,7 @@ figure {
 
       display: block;
       object-fit: cover;
+      background: rgba(0, 0, 0, 0.54);
     }
   }
 
@@ -363,7 +426,8 @@ figure {
     color: rgba(0, 0, 0, 0.54);
 
     figcaption {
-      border-left: 2px solid #64ffda;
+      padding: 8px;
+      background: white;
     }
 
     img {
@@ -372,6 +436,7 @@ figure {
 
       display: block;
       object-fit: cover;
+      background: rgba(0, 0, 0, 0.54);
     }
   }
 }
