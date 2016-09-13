@@ -343,9 +343,15 @@ figure {
     font-size: 13px;
     color: rgba(0, 0, 0, 0.54);
 
+    figcaption {
+      border-left: 2px solid #64ffda;
+    }
+
     img {
       @include width();
       @include height(16/9);
+
+      display: block;
       object-fit: cover;
     }
   }
@@ -356,9 +362,15 @@ figure {
     font-size: 13px;
     color: rgba(0, 0, 0, 0.54);
 
+    figcaption {
+      border-left: 2px solid #64ffda;
+    }
+
     img {
       @include width();
       @include height(9/16);
+
+      display: block;
       object-fit: cover;
     }
   }
