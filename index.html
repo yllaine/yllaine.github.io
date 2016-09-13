@@ -1,0 +1,13 @@
+---
+layout: default
+title: Home
+---
+{% for post in site.posts %}
+  <article class="card">
+    <a href="{{ post.url }}">
+      <img src="{{ post.image }}" ></img>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.date | date: "%a, %-d %b %Y" }}</p>
+    </a>
+  </article>
+{% endfor %}

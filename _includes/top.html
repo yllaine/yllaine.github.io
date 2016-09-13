@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  {% assign title = site.title %}
+  {% if page.title %}
+    {% assign title = title | append: ' :: ' | append: page.title %}
+  {% endif %}
+  <title>{{ title }}</title>
+  {% comment %}{% seo %}{% endcomment %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  {% comment %}{% feed_meta %}{% endcomment %}
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]>
+  <script src="/assets/js/html5shiv-printshiv.js"></script>
+  <script src="/assets/js/respond.min.js"></script>
+  <![endif]-->
+</head>
