@@ -1,11 +1,11 @@
 <ul>
   <li>
-    <a href="/blog/">Blog</a>
+    <a {% if page.categories contains 'blog' %}class="active"{% endif %} href="/blog/">Blog</a>
   </li>
   <li>
-    <a href="/articles/">Articles</a>
+    <a {% if page.categories contains 'article' %}class="active"{% endif %} href="/articles/">Articles</a>
   </li>
   <li>
-    <a href="/recipes/">Recipes</a>
+    <a {% if page.categories contains 'recipe' %}class="active"{% endif %} href="/recipes/">Recipes</a>
   </li>
 </ul>

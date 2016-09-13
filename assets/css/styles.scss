@@ -145,6 +145,10 @@ header {
   nav {
     font-family: 'Roboto Mono', monospace, 'Roboto', sans-serif;
 
+    .active {
+      border-bottom: 2px solid #64FFDA;
+    }
+
     ul {
       list-style: none;
 
